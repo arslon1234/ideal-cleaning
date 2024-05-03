@@ -3,7 +3,7 @@ import type { AxiosInstance } from 'axios';
 import { getDataFromCookie } from '@token-service';
 
 const request : AxiosInstance = axios.create({
-    baseURL: "https://app.olimjanov.uz/v1",
+    baseURL: import.meta.env.VITE_BASE_URL,
     //   timeout: 48000,
 })
 
