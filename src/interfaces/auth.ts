@@ -26,6 +26,11 @@ export interface ResetPassword{
     email?: string;
     phone?: string|number;
 }
+export interface GetParams{
+    page: string | number;
+    limit: string | number;
+    owner_email: string
+}
 export interface Request {
     sign_in:(data:SignIn)=>any,
     sign_up:(data:SignUp)=>any,
@@ -33,5 +38,5 @@ export interface Request {
     forgot_password:(data:ForgotPassword)=> any,
     update_password:(data:UpdatePassRequest)=> any,
     sign_out:()=>void,
-    reset:(data:ResetPassword)=>void
+    get_service:(params:GetParams)=>any
 }
